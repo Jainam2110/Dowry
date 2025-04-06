@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1677875021712-6a7607e68ab2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* filter: brightness(10%); */
+}
+    
+#nav{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.438);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#topleft{
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    margin-left: 30px;
+}
+
+#topleft img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#topright{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 55px;
+}
+
+#topright h4{
+    font-size: 10px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#topright a{
+    font-size: 10px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+#topright h4:hover{
+    color: rgb(65, 171, 136);
+    text-decoration: underline;
+}
+
+#topright a:hover{
+    color: rgb(65, 171, 136);
+    text-decoration: underline;
+}
+
+#center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    margin-top: 14%;
+}
+
+#center h1{
+    font-size: 120px;
+    color: rgba(103, 101, 101, 0.651);
+    text-decoration: underline;
+}
+
+#topleft a{
+    position: absolute;
+    top: -15px;
+    left: 32px;
+    font-size: 50px;
+    opacity: 0;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    height: 70%;
+    position: absolute;
+    left: 60%;
+    top: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5%;
+}
+
+#form select,input{
+    font-size: 20px;
+}
+
+#form label{
+    font-weight: bold;
+    color: grey;
+}
+
+#submit{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 8%;
+}
+
+.name{
+    color: white;
+    background-color: black;
+    /* border-radius: 10%; */
+    height: 12%;
+    width: 85%;  
+}
+
+#form h2{
+   color: grey;
+   position: absolute;
+   top: 10%;
+}
+
+#box1{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0%;
+    opacity: 0;
+}
+
+#photo{
+    position: absolute;
+    top: 46%;
+}
+
+.letter{
+    padding: 20px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.letter h3{
+    font-weight: 300;
+}
+
+#main h1{
+    filter: brightness(100%);
+    color: white;
+}
+
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease forwards;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    position: relative;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    animation: scaleUp 0.6s ease forwards;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  }
+
+  .popup-content h2{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .popup-content p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+
+  .popup-content p>span{
+    font-size: 90px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    /* background-color: rgba(209, 209, 209, 0.363); */   
+  }
+
+  .popup-content a{
+    position: absolute;
+    top: 16px;
+    right: 25px;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: red;
+    color: white;
+    padding: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  
+  #close-popup:checked ~ .popup-box {
+    display: none;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes scaleUp {
+    from {transform: scale(0.5);}
+    to {transform: scale(1);}
+  }
+  
+
+
+
